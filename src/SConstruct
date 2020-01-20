@@ -1,0 +1,31 @@
+# C Compiler settings
+baseEnvironment = Environment(
+                CC = 'gcc',
+                CFLAGS = '-std=c17',
+                )
+
+# Lib X11
+baseEnvironment.Append(CFLAGS = ['-lX11'])
+
+releaseEnvironment = baseEnvironment
+
+debugEnvironment = baseEnvironment
+debugEnvironment.Append(CFLAGS = ['-g'])
+
+
+# Debug target
+debugMain = debugEnvironment.Program(
+          target = 'main',
+          source = 'main.c'
+          )
+
+debugEnvironment.Default(debugMain)
+
+
+# Release target
+releaseMain = releaseEnvironment.Program(
+            target = 'main',
+            source = 'main.c'
+            )
+
+releaseEnvironment.Default(releaseMain)

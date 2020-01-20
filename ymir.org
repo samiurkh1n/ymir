@@ -1,0 +1,21 @@
+#+TITLE: Ymir
+#+AUTHOR: Samiur
+
+* Prerequisites
+
+Install
+- scons
+
+** Ubuntu
+
+#+BEGIN_SRC sh
+$ sudo apt install libx11-dev
+#+END_SRC
+
+* Build
+
+#+BEGIN_SRC sh
+$ scons
+#+END_SRC
+
+Will place binary inside $PROJECT_DIR/build/ directory

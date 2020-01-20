@@ -1,0 +1,11 @@
+# Tag
+tags
+TAGS
+cscope.*
+GPATH
+GRTAGS
+GTAGS
+
+# Built files
+.sconsign.dblite
+build/*
